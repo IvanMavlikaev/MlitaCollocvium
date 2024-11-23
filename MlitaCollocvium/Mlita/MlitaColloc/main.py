@@ -16,7 +16,6 @@ if __name__ == '__main__':
     print(ar.translate())
     print(ar.implication_negation().implication_negation())
     b = Var('B')
-
     a = BasicAxiom()
     x1 = Var('A')
     x2 = Var('B')
@@ -34,3 +33,5 @@ if __name__ == '__main__':
     print(n.A11(s))
     s = parse("A|!A")
     print(n.A11(s))
+    x = "(A | A | A | A)"
+    print(parse(x).implication_negation())

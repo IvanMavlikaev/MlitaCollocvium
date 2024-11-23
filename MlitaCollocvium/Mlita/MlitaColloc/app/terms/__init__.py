@@ -1,11 +1,10 @@
 from .abstract import Term
 from .variable import Var
 
-from .negation import Not
 from .implication import Arrow
-
-from .conjunction import And
 from .disjunction import Or
+from .negation import Not
+from .conjunction import And
 from .equivalence import Equal
 from .xor import Xor
 

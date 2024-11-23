@@ -30,5 +30,4 @@ class Not(UnaryOperator):
         """Проверка на принадлежность к тому же типу"""
         if type(self) == type(object):
             return True
-        print(type(self), type(object))
         return False
