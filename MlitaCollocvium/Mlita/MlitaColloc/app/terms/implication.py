@@ -2,6 +2,7 @@ from .abstract import BinaryOperator
 from app.utils.is_unar_operator import is_unar_operator
 from .abstract.term import Term
 
+
 class Arrow(BinaryOperator):
     _symbol = '>'
 

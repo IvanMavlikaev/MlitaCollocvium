@@ -69,10 +69,9 @@ class Axiom():
     def A10(self, expression):
         not_elem = Not(Var("A"))
         arrow_elem = Arrow(Var("C"), Var("D"))
-
         if (
             arrow_elem.isinstance(expression) and not_elem.isinstance(expression.arg1) and arrow_elem.isinstance(expression.arg2)
-            and expression.arg1.eque_exclude_not(expression.arg2.arg1)
+            and expression.arg1.eque(expression.arg2.arg1)
         ):
             return True
 
@@ -81,11 +80,8 @@ class Axiom():
     def A11(self, expression):
         or_elem = Or(Var("A"), Var("B"))
         not_elem = Not(Var("C"))
-        #print(expression.arg2.eque(expression.arg1), expression.arg2, 'eq', expression.arg1)
-
-        if or_elem.isinstance(expression) and not_elem.isinstance(expression.arg2) and expression.arg2.eque(expression.arg1):
+        if or_elem.isinstance(expression) and not_elem.isinstance(expression.arg1) and expression.arg2.eque(expression.arg1.arg):
             return True
-
         return False
 
 
